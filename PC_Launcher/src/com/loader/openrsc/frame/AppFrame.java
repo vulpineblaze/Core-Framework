@@ -22,8 +22,10 @@ public class AppFrame extends JFrame {
 	private LaunchButton launch5;
 
 	private final int preservation_x = 113;
-	private final int openrsc_x = 165;
-	private final int cabbage_x = 295;
+	// private final int openrsc_x = 165;
+	private final int reborn1_x = 165;
+	private final int reborn2_x = 295;
+	// private final int cabbage_x = 295;
 	private final int openpk_x = 420;
 	private final int dev_x = 535;
 	private final int launch_button_y = 218;
@@ -81,13 +83,13 @@ public class AppFrame extends JFrame {
 		this.bg.add(new LinkButton(BUTTON1, new Rectangle(101, link_button_y, link_button_width, link_button_height)));
 
 		final String BUTTON2 = "Bug Reports";
-		this.bg.add(new LinkButton(BUTTON2, new Rectangle(256, link_button_y, link_button_width, link_button_height)));
+		// this.bg.add(new LinkButton(BUTTON2, new Rectangle(256, link_button_y, link_button_width, link_button_height)));
 
-		final String BUTTON3 = "Our Wiki";
+		final String BUTTON3 = "Our Site";
 		this.bg.add(new LinkButton(BUTTON3, new Rectangle(414, link_button_y, link_button_width, link_button_height)));
 
 		final String BUTTON4 = "RSC Wiki";
-		this.bg.add(new LinkButton(BUTTON4, new Rectangle(567, link_button_y, link_button_width, link_button_height)));
+		// this.bg.add(new LinkButton(BUTTON4, new Rectangle(567, link_button_y, link_button_width, link_button_height)));
 
 
 		// Launch button size
@@ -95,21 +97,25 @@ public class AppFrame extends JFrame {
 		int launch_button_height = 100;
 
 		// Launch buttons
-		String preservation = "preservation";
+		// String preservation = "preservation";
 		//(this.launch4 = new LaunchButton(openpk)).setBounds(preservation_x, 209, launch_button_width, launch_button_height);
 		//this.bg.add(this.launch4);
 
-		String openrsc = "openrsc";
-		(this.launch1 = new LaunchButton(openrsc)).setBounds(openrsc_x, launch_button_y, launch_button_width, launch_button_height);
+		String reborn_w1 = "reborn_w1";
+		(this.launch1 = new LaunchButton(reborn_w1)).setBounds(reborn1_x, launch_button_y, launch_button_width, launch_button_height);
 		this.bg.add(this.launch1);
-
-		String cabbage = "cabbage";
-		(this.launch2 = new LaunchButton(cabbage)).setBounds(cabbage_x, launch_button_y - 3, launch_button_width, launch_button_height);
+		
+		String reborn_w2 = "reborn_w2";
+		(this.launch2 = new LaunchButton(reborn_w2)).setBounds(reborn2_x, launch_button_y, launch_button_width, launch_button_height);
 		this.bg.add(this.launch2);
 
-		String dev = "dev";
-		(this.launch5 = new LaunchButton(dev)).setBounds(dev_x, launch_button_y, launch_button_width, launch_button_height);
-		this.bg.add(this.launch5);
+		// String cabbage = "cabbage";
+		// (this.launch2 = new LaunchButton(cabbage)).setBounds(cabbage_x, launch_button_y - 3, launch_button_width, launch_button_height);
+		// this.bg.add(this.launch2);
+
+		// String dev = "dev";
+		// (this.launch5 = new LaunchButton(dev)).setBounds(dev_x, launch_button_y, launch_button_width, launch_button_height);
+		// this.bg.add(this.launch5);
 
 
 		// Control button size

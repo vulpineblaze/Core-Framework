@@ -1,1 +1,1 @@
-localhost
+game.rscreborn.com

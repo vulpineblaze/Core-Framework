@@ -14,6 +14,8 @@ import org.apache.logging.log4j.Logger;
 
 import java.net.InetSocketAddress;
 
+import java.io.File; 
+
 public abstract class LoginRequest extends LoginExecutorProcess{
 	/**
 	 * The asynchronous logger.
@@ -108,6 +110,14 @@ public abstract class LoginRequest extends LoginExecutorProcess{
 				}
 			});
 
+			System.out.println("JGDEBUG: (touch file) player loaded: "+getUsername());
+
+			File f = new File("hack/loggedIn."+getUsername().toLowerCase());
+			f.getParentFile().mkdirs();
+			try{
+				f.createNewFile();
+			}catch(Exception e){}
+
 		}
 		LOGGER.info("Processed login request for " + getUsername() + " response: " + loginResponse);
 	}
@@ -154,7 +164,11 @@ public abstract class LoginRequest extends LoginExecutorProcess{
 				return (byte) LoginResponse.WORLD_IS_FULL;
 			}
 
-			if (getServer().getWorld().getPlayer(getUsernameHash()) != null) {
+			File f = new File("hack/loggedIn."+getUsername().toLowerCase()); 
+			if (f.exists() && f.isFile() || getServer().getWorld().getPlayer(getUsernameHash()) != null) {
+				System.out.println("JGDEBUG: (check file exists) ACCOUNT_LOGGEDIN: for:"+getUsername());
+				// LOGGER.info("JGDEBUG: ACCOUNT_LOGGEDIN: "+LoginResponse.ACCOUNT_LOGGEDIN);
+
 				return (byte) LoginResponse.ACCOUNT_LOGGEDIN;
 			}
 

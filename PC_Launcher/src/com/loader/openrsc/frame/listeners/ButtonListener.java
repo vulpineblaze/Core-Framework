@@ -15,61 +15,76 @@ public class ButtonListener implements ActionListener {
 	public void actionPerformed(final ActionEvent event) {
 		final String action = event.getActionCommand().toLowerCase();
 		switch (action) {
-			case "rsc wiki": {
-				Utils.openWebpage("https://classic.runescape.wiki");
+			// case "rsc wiki": {
+			// 	Utils.openWebpage("https://classic.runescape.wiki");
+			// 	return;
+			// }
+			case "our site": {
+				Utils.openWebpage("http://rscreborn.com");
+				// Utils.openWebpage("https://rscreborn.com");
 				return;
 			}
-			case "our wiki": {
-				Utils.openWebpage("https://runescapeclassic.dev/wiki");
-				return;
-			}
-			case "bug reports": {
-				Utils.openWebpage("https://orsc.dev/open-rsc/Game/issues");
-				return;
-			}
+			// case "bug reports": {
+			// 	Utils.openWebpage("https://orsc.dev/open-rsc/Game/issues");
+			// 	return;
+			// }
 			case "discord": {
-				Utils.openWebpage("https://discord.gg/94vVKND");
+				Utils.openWebpage("https://discord.gg/ywvqRJK");
 				return;
 			}
 
-			case "openrsc": {
-				String ip = "game.openrsc.com";
-				String port = "43596";
-				set(ip, port);
-				launch();
-				return;
-			}
-			case "cabbage": {
-				String ip = "game.openrsc.com";
+			case "reborn_w1": {
+				String ip = "game.rscreborn.com";
 				String port = "43595";
 				set(ip, port);
 				launch();
 				return;
 			}
-
-			case "preservation": {
-				String ip = "game.openrsc.com";
-				String port = "43594";
+			case "reborn_w2": {
+				String ip = "game.rscreborn.com";
+				String port = "43596";
 				set(ip, port);
 				launch();
 				return;
 			}
+			// case "openrsc": {
+			// 	String ip = "game.openrsc.com";
+			// 	String port = "43596";
+			// 	set(ip, port);
+			// 	launch();
+			// 	return;
+			// }
+			// case "cabbage": {
+			// 	String ip = "game.openrsc.com";
+			// 	String port = "43595";
+			// 	set(ip, port);
+			// 	launch();
+			// 	return;
+			// }
 
-			case "wk": {
-				String ip = "game.openrsc.com";
-				String port = "43598";
-				set(ip, port);
-				launch();
-				return;
-			}
+			// case "preservation": {
+			// 	String ip = "game.openrsc.com";
+			// 	String port = "43594";
+			// 	set(ip, port);
+			// 	launch();
+			// 	return;
+			// }
 
-			case "dev": {
-				String ip = "game.openrsc.com";
-				String port = "43599";
-				set(ip, port);
-				launch(true);
-				return;
-			}
+			// case "wk": {
+			// 	String ip = "game.openrsc.com";
+			// 	String port = "43598";
+			// 	set(ip, port);
+			// 	launch();
+			// 	return;
+			// }
+
+			// case "dev": {
+			// 	String ip = "game.openrsc.com";
+			// 	String port = "43599";
+			// 	set(ip, port);
+			// 	launch(true);
+			// 	return;
+			// }
 
 			case "minimize": {
 				AppFrame.get().setState(1);

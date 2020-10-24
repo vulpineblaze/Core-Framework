@@ -50,6 +50,7 @@ import java.util.Map.Entry;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.atomic.AtomicReference;
 
+import java.io.File; 
 /**
  * A single player.
  */
@@ -2165,6 +2166,13 @@ public final class Player extends Mob {
 		getWorld().getPartyManager().checkAndUnattachFromParty(this);
 
 		getWorld().getServer().getLoginExecutor().add(new PlayerRemoveRequest(getWorld().getServer(), this));
+		System.out.println("JGDEBUG: (delete file) logoutSaveSuccess() for: "+getUsername().toLowerCase());
+				// LOGGER.info("JGDEBUG: logoutSaveSuccess()");
+		File f = new File("hack/loggedIn."+getUsername().toLowerCase()); 
+    	if (f.delete()) {
+    		System.out.println("JGDEBUG: delete() success! for: "+getUsername().toLowerCase());
+    	}
+
 	}
 
 	public void sendMemberErrorMessage() {

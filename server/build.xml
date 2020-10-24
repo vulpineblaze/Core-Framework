@@ -63,7 +63,10 @@
     <target name="runserver">
         <java classname="com.openrsc.server.Server" fork="true">
             <!-- Comment out the below default.conf reference to disable default loading and instead run multiple worlds on the same server process -->
-            <arg value="default.conf"/>
+            <!-- <arg value="default.conf"/> -->
+            <!-- <arg value="local.conf"/> -->
+            <arg value="world1.conf"/>
+            <arg value="world2.conf"/>
             <!-- Uncomment the below section to run multiple worlds on the same server process (comment out default.conf above first)-->
             <!--<arg value="openrsc.conf"/>
             <arg value="rsccabbage.conf"/>-->

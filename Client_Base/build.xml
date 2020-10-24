@@ -4,6 +4,7 @@
     <property name="build" location="build"/>
     <property name="lib" location="lib"/>
     <property name="jar" location="Open_RSC_Client.jar"/>
+    <!-- <property name="jar" location="RSC_Reborn_Client.jar"/> -->
     <property name="javac.source" value="1.8"/>
     <property name="javac.target" value="1.8"/>
 

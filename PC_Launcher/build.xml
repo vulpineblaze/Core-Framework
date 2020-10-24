@@ -27,6 +27,7 @@
                 <attribute name="Main-Class" value="com.loader.openrsc.Launcher"/>
             </manifest>
         </jar>
+        <copy file="./OpenRSC.jar" tofile="./RSCRebornLaunch.jar" overwrite="true"/>
     </target>
 
     <target name="runlauncher">
